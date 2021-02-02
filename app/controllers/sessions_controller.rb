@@ -9,29 +9,21 @@ class SessionsController < ApplicationController
   end
 
   def create
-    
+    user = User.find_by(username: params[:user][:username])
+    if user && user.authenticate(params[:user][:password])
+      session[:user_id] = user.id
+      redirect_to lists_path
+    else
+      flash[:message] = "Incorrect username or password, please try again."
+      render :new
+    end
   end
 
   def destroy
-    binding.pry
     session.clear
     redirect_to root_path
   end
 
-  # private
   
-  # def current_user
-  #   session[:user_id] == @user.id
-  # end
-
-  # def logged_in?
-  #   !!current_user
-  # end
-
-  # def redirect_if_not_logged_in
-  #   if !current_user
-  #     redirect_to login_path
-  #   end
-  # end
 
 end

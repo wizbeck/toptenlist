@@ -2,4 +2,4 @@
 
 <%= button_to 'Logout', logout_path, method: 'delete' %>
 
-<%= link_to user_path(session[:user_id])%>
+<%= link_to 'My Profile', user_path(@current_user)%>
