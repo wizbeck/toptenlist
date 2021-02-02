@@ -4,7 +4,7 @@ class CreateLists < ActiveRecord::Migration[6.1]
       t.string :title
       t.text :description
       t.integer :user_id
-      t.integer :list_id
+      t.integer :topic_id
       t.string :item_1
       t.string :item_2
       t.string :item_3

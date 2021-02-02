@@ -1,5 +1,5 @@
 class Topic < ApplicationRecord
-  has_many :lists
+  has_many :liststop
   has_many :users, through: :lists
-  
+
 end
