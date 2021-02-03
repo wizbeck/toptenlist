@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   post '/login' => 'sessions#create'
 
   #logout route
-  delete '/logout' => 'sessions#destroy'
+  delete '/logout', to: 'sessions#destroy', as: 'logout'
 
   resources :topics
   resources :lists
