@@ -1,4 +1,6 @@
 # README
+UPDATE: I messed up some files that didn't allow me to continue any further smoothly. SO i rebuilt the app in another repository, under toptenlister. Check it out here: https://github.com/wizbeck21/toptenlister
+
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
